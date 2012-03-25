@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function getAction(mode) {
+				return {
+					insert: "add"
+					,update: "up"
+					,delete: "del"
+				}[mode];
+			}
+			
+			function oldGetAction(mode) {
+				var result = "";
+				if(mode == "insert") {
+					result = "add";
+				} else if(mode == "update"){
+					result = "up";
+				} else if(mode == "delete") {
+					result = "del";
+				}
+				return result;
+			}
+			window.onload = function() {
+				console.log(getAction("insert"));
+				console.log(getAction("delete"));
+				console.log(oldGetAction("update"));
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
